@@ -101,7 +101,7 @@ header .gnb ul li.active {
 /* section visual style */
 
 section.visual .slide li {
-    background: violet;
+ /*   background: violet; */
     height: 100vh;
     overflow: hidden;
     position: relative;
@@ -144,4 +144,174 @@ section.visual .slide li .scroll {
     font-weight: bold;
     color: #ccc;
     transform: rotate(-90deg); /*글자를 돌리기 위해서 사용, 반시계방향을 위해 마이너스를 줌*/
+}
+
+/* section content style */
+section.contents {
+    background: #1b1b1b;
+    padding: 120px 0;
+}
+
+/*main-text*/
+section.contents .main-text {
+   /* background: orange; */
+    width: 80%;
+    margin: 0 auto;
+    font-size: 25px;
+
+    display: flex;
+    position: relative;
+}
+
+section.contents .main-text::before { /*가상요소 만들기*/
+   background: yellow;
+    content: '';
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+ /*   background: #ffec03; */
+    
+    
+    position: absolute;
+    left: 70px;
+    top: 100px;
+}
+section.contents .main-text::after {
+    content: '”';
+    font-size: 300px;
+
+    position: absolute;
+    left: 0;
+    top: 100px;
+}
+
+section.contents .main-text h3 {
+ /*   background: red; */
+    flex: 1;
+    font-weight: bold;
+}
+
+section.contents .main-text p {
+  /*  background: blue; */
+    flex: 2; 
+    font-size: 23px;
+    line-height: 1.4;
+    text-align: justify;
+}
+
+section.contents .main-text p span {
+    display: block;
+    font-size: 20px;
+    color: #999;
+    margin-top: 30px;
+}
+
+/* .project */
+
+section.contents .project .top {
+   /* background: orange; */
+    width: 80%;
+    margin: 200px auto 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+section.contents .project .top h3 {
+    font-size: 35px;
+    font-weight: 700;
+}
+section.contents .project .top a {
+    font-size: 18px;
+}
+
+section.contents .project ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+section.contents .project ul li {
+    width: 24%;
+    border: 4px solid #fff;
+    height: 400px;
+    overflow: hidden;
+    position: relative
+}
+
+section.contents .project ul li a::before {
+    content: '';
+    width: 0;
+    height: 100%;
+    background: rgba(27, 27, 27, 0.8);
+    position: absolute;
+    transition: 0.6s;
+}
+
+section.contents .project ul li a:hover::before {
+    width: 100%;
+}
+
+section.contents .project ul li img {
+    width: 100%; /*위스가 설정 되면서 이미지가 화면에 맞게 맞춰짐*/
+}
+
+section.contents .project ul li .name {
+    background: #1b1b1b;
+    font-size: 22px;
+    text-align: right;
+    width: 250px;
+    padding: 15px;
+
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+    opacity: 0; /*투명해지게*/
+}
+
+section.contents .project ul li a:hover .name {
+    animation: show-name 1s both;
+}
+
+@keyframes show-name {  /*애니메이션 효과*/
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* partner style */
+
+
+section.contents .partner {
+ /*   background: orange; */
+    width: 80%;
+    margin: 170px auto 100px;
+}
+
+section.contents .partner h3 {
+    font-size: 20px;
+    margin-bottom: 80px;
+}
+
+section.contents .partner ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+section.contents .partner ul li {
+  /*  border: 4px solid #fff; */
+    width: 25%;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+
+    opacity: 0.4;
+    transition: 0.3;
+}
+
+section.contents .partner ul li:hover {
+    opacity: 1;
 }
