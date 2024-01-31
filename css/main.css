@@ -315,3 +315,52 @@ section.contents .partner ul li {
 section.contents .partner ul li:hover {
     opacity: 1;
 }
+
+/* .contact style*/
+section.contents .contact {
+    width: 90%;
+    padding: 220px 0;
+    background: url(../img/contact.jpg) no-repeat center/cover fixed;
+    /*백그라운드 이미지 노리핏은 반복되지 않음 센터는 위치 커버는 이미지가 비율에 맞게 픽스드는 스크롤해도 고정하려고 적어놈*/
+}
+section.contents .contact .inner {
+  /*  border: 4px solid #000; */
+    width: 70%;
+    margin: 0 auto;
+    font-size: 17px;
+    line-height: 1.4;
+}
+section.contents .contact .inner .tel {
+    font-size: 55px;
+    font-weight: 700;
+    margin: 50px 0;
+}
+
+/* footer */
+footer {
+    background: #1b1b1b;
+    color: #999;
+    padding: 0 80px 80px;
+}
+footer ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer ul li:nth-child(2) {
+    color: #eee;
+    font-size: 16px;
+    line-height: 2;
+}
+footer ul li:nth-child(2) span {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #999;
+}
+footer .go-top {
+    color: #fff;
+    font-size: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 60px;
+}
